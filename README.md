@@ -262,6 +262,29 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
     - The work of this commit is lost
     - Greater change of a merge conflict
 
+## Pull requests I
+### Pull request overview
+- A feature of Git hosting sites
+  - Pull requests are opened using an online Git host such as Bitbucket or GitHub
+- The ultimate goal of a pull request is to merge a branch, but they also facilitate team discussion and approval
+- Enable team communication related to the work of the branch
+  - Notifications sent to team members
+  - Feedback or comments
+  - Approval of the content (code review)
+- When do you open a pull request?
+  - When the branch is created  
+  - When you want comments on the branch
+  - When the branch is ready for review/merging
+- You can open a pull request any time after creating the branch
+- You do not need to edit the pull request if you add a commit to the branch
+
+
+### Single repository pull requests
+- Preparing for pull request (single repository)
+  - Create a feature branch
+  - Optionally work on the feature branch
+  - Push the branch to the remote repository
+
 ### Squash merges
 1. Merges the tip of the feature branch (D) onto the tip of the base branch (C)
   - There is a change of a merge conflict
