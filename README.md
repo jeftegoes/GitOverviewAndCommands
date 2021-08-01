@@ -60,6 +60,7 @@
 ## Git overview
 ### Version control overview
 #### What is version control?
+- Version control enables teams to manage a collecion of files in an agile way
 - Content
   - Complete history tracked and available
 - Teams
@@ -76,8 +77,27 @@
 - Documentation
 - A book
 - Web site content
+#### Distributed version control system (DVCS)
+- A DVCS usually has these characteristics:
+  - (User A) local repository >>> remore repository <<< local repository (User B)
+  - Each user has a local project history (repository)
+  - Users can work offline
+  - Can easily synchronize repositories
 ### Git overview
+#### What is Git?
+- Git is a distributed version control system (DVCS)
+- Open source software (OSS)
+  - Has a vibrant community and ecosystem
+- Adapt to many types of projects and workflows
+  - Works well for large or small projects
+#### What is a git repository?
+- A series of *snapshots*, or *commits*
 ### Command line vs. user interface
+#### Should you use the command line?
+- Command line skills are assumed by the industry
+- Command line = automatable
+- Fast and easy
+#### Should you use the command line?
 - Structure work git: Working Tree > Staging Area > Local Repository > Remote Repository
 - Remote repository
   - Professionally managed
@@ -90,6 +110,19 @@
   - Bitbucket Server
   - GitHub Enterprise
   - Open source software
+
+
+
+
+
+## Installation and getting started
+### Installing Git
+### Git syntax
+### Getting help
+### Configuring user information and the default editor
+
+
+
 
 
 
