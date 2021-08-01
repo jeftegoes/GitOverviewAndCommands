@@ -1,7 +1,83 @@
 # Git
 
-## Git overview
 
+
+
+
+## DevOps and Git in a nutshell
+### Continuous improvement
+- DevOps has a few fundamental principles that most modern software projects follow. One of the key principles is to continuously plan, build and release small improvements to your product.
+- This is contrasted with what might be called the waterfall approach, In which many features are planned, developed and released as one batch.
+#### Small batch size
+- Small batch size leads to continuous improvement
+#### Adding a feature
+ - Small batch size also applies to features
+### Managing project versions
+#### Our project
+- Product contains 50 files of code
+  - This is out "project"
+- We want to continuously improve it
+- Hot does Git help?
+#### Git commits
+- Git manages versions of projects
+- Each version of a project is called a *commit*
+- Assuming the bug fix involves a change to only one of the 50 files
+  - Commits A and B only differ by one file
+  - A small improvement in the product
+#### Project history
+- The collection of commits contain the history of the project
+  - You can review the history
+  - You can "undo" a change
+#### Is git efficient?
+- Each commit is a snapshop of the entire project
+- Behind the scenes, Git is very efficient at storing commits
+  - Each unique file is stored only once
+### Branches
+- All commits belong to a *branch*
+  - An independent line of development of the project
+- By default, there is a single branch and it is called *master*
+#### Creating branches
+- How do you maintain a stable project at the same time that you are working on it?
+  - Create a separate branch
+- The *master* branch does not know about the *featureX* branch
+#### Teams
+- The independence of branches allows teams to scale their work
+### Pull requests
+#### Merging
+- After a *merge*, the *master* branch contains the new feature
+#### Pull request
+- Request to merge your branch into another branch
+  - Team members can discuss, review and approve your changes
+  - Can require passing automated tests
+#### Pull request accepted
+- Reviewed
+- Tested
+
+
+
+
+
+## Git overview
+### Version control overview
+#### What is version control?
+- Content
+  - Complete history tracked and available
+- Teams
+  - Support many workflows
+  - Collaboration
+  - Quality through team communication and reviews
+- Agility
+  - Manages small changes
+  - Easily test, fix or undo ideas and changes
+#### What type of content?
+- Source code
+- Automated tests
+- Server configuration
+- Documentation
+- A book
+- Web site content
+### Git overview
+### Command line vs. user interface
 - Structure work git: Working Tree > Staging Area > Local Repository > Remote Repository
 - Remote repository
   - Professionally managed
@@ -14,6 +90,10 @@
   - Bitbucket Server
   - GitHub Enterprise
   - Open source software
+
+
+
+
 
 ## Two scenarios starting with a remote repository
 | Have a local repository | Task             |
@@ -37,8 +117,6 @@ git remote add origin https://github.com/jeftegoesdev/GitOverviewAndCommands.git
 git branch -M main
 git push -u origin main
 ```
----
-
 ## Git status files legends
 - U or ?? - Untracked
 - A - Staged
@@ -105,6 +183,10 @@ Tags can be used instead of branchs labels or Git IDs in Git commands
     - Includes tag author information, tag date, tag message, the commit ID
     - Optionally can be signed and verified with GNU Privacy Guard (GPG)
 
+
+
+
+
 ## Branches
 ### Benefits of branches
 - Fast and easy to create
@@ -133,6 +215,10 @@ Main types of merges:
 - Moves the base branch label to the tip of the topic branch
     - Conditions for a fast-forward merge
         - Possible if no other commits have been made to the base branch since branching
+
+
+
+
 
 ## Resolving merge conflicts
 ### Merge conflict overview
@@ -166,12 +252,20 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
   - Text form the `HEAD`  commit is between <<<<<<< and =======
   - Text from the branch to be merged is between ======= and >>>>>>>
 
+
+
+
+
 ## Tracking branches
 ### Tracking branch overview
 - A local branch that represents a remote branchs `<remote>/<branch>`
 ### Viewing tracking branch names and status
 - remotes/origin/HEAD THIS IS A SYMBOLIC REFERENCE.
 - Allows `<remote>` to be specified instead of `<remote>/<branch>` in Git commands
+
+
+
+
 
 ## Fetch, Pull and Push
 ### Network command overview
@@ -195,6 +289,11 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
 
 ### Push
 - Push adds commits to the remote repository
+
+
+
+
+
 
 ## Rebasing
 ### Rebasing overview
@@ -229,6 +328,10 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
 ### Executing a rebase
 ### Rebasing with merge conflicts
 
+
+
+
+
 ## Rewriting history
 ### Amending a commit
 - You can change the most recent commit:
@@ -262,6 +365,10 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
     - The work of this commit is lost
     - Greater change of a merge conflict
 
+
+
+
+
 ## Pull requests I
 ### Pull request overview
 - A feature of Git hosting sites
@@ -282,18 +389,27 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
   - Create a feature branch
   - Optionally work on the feature branch
   - Push the branch to the remote repository
-  
+
+
+
+
+
 ## Pull requests II
 ### Forking overview
 - Forking - copying a remote repository to your own online account
 - Both repositories are remote repositories
 - The upstream repository is usually the "source of truth"
 - What is a fork used for?
-  - Experiment with/learn form the upstram repository
-  - Issue pull requests to the upstram repository
+  - Experiment with/learn form the upstream repository
+  - Issue pull requests to the upstream repository
   - Create a different source of truth
   - A form is created uwing an online GIt hosting provider
   - Pull requests can be made form forks and merged into the upstream repository
+
+
+
+
+
 
 ## Git workflows
 ### Centralized workflow
@@ -326,8 +442,11 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
   - After the featureX label is deleted, commits B and D are no longer part of any named branch
     - Commits B and D will eventually be garbage collected
   - A squash merge rewrites the commit history
-   
---- 
+
+
+
+
+
 ## Git principal commands
 - Set user name and email
     - git config --global user.name "your_username"
@@ -379,7 +498,7 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
     - git branch
     - git branch -a # -a/--all see remote and local repositories
 - Create a branch
-    - git branch `<name>`
+    - git branch `<name>` `<sha1-of-commit>`
 - Delete a branch
     - git branch -d `<name>`
     - git push origin  -- delete `<name>`
@@ -408,10 +527,12 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
     3. git branch -d feature/a # optional
 - Retrieves new objects and references from another repository
   - git fetch
-- Changes the parent of the currently checked out branch to `<upstram>`
-  - git rebase `<upstram>`
-  - git rebase `<upstram> <branch>`
-- Get back to the pre-rebase state
-  - git rebase --abort
+- Changes the parent of the currently checked out branch to `<upstream>`
+  - git rebase `<upstream>`
+  - git rebase `<upstream> <branch>`
+  - Finished making all your changes
+    - git rebase --continue
+  - Get back to the pre-rebase state
+    - git rebase --abort
 - Commits in the current branch after `<after-this-commit>` are listed in an editor and can be modified
   - git rebase -i `<after-this-commit>`
