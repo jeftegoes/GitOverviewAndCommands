@@ -39,7 +39,7 @@ git push -u origin main
 ```
 ---
 
-## Git legends
+## Git status files legends
 - U or ?? - Untracked
 - A - Staged
 - M - Modified
@@ -277,13 +277,45 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
   - When the branch is ready for review/merging
 - You can open a pull request any time after creating the branch
 - You do not need to edit the pull request if you add a commit to the branch
-
-
 ### Single repository pull requests
 - Preparing for pull request (single repository)
   - Create a feature branch
   - Optionally work on the feature branch
   - Push the branch to the remote repository
+  
+## Pull requests II
+### Forking overview
+- Forking - copying a remote repository to your own online account
+- Both repositories are remote repositories
+- The upstream repository is usually the "source of truth"
+- What is a fork used for?
+  - Experiment with/learn form the upstram repository
+  - Issue pull requests to the upstram repository
+  - Create a different source of truth
+  - A form is created uwing an online GIt hosting provider
+  - Pull requests can be made form forks and merged into the upstream repository
+
+## Git workflows
+### Centralized workflow
+- Only a single branch
+- no pull requests/discussion
+### Feature branch workflow
+- Work done on feature/topic branches
+- Single remote repository
+- Pull requests/discussion
+### Forking workflow
+- Multiple remote repositories
+- Pull requests/discussion
+- Don't need write access on upstream
+- Backs up your work in progress
+- Can rebase your forked branch
+- Must synchronize with upstream
+### Gitflow workflow
+- Enable a continuous train of project releases using multiple types of branches
+- Merging "Rules"
+  1. Only merge commits on master
+  2. Commit to master only from a release or hotfix branch
+  3. If you commit to master, also merge into the develop
 
 ### Squash merges
 1. Merges the tip of the feature branch (D) onto the tip of the base branch (C)
