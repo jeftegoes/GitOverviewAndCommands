@@ -478,7 +478,21 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
 
 
 
-
+## Transfer repo to another repo
+1. Mirror the project from repo X to repo Y
+   - git clone --mirror `<url/to/projectname.git>`
+2. See if exists tag into repo
+   - git tag
+3. Verif if all branches downloaded
+   - git branch -a
+4. Remove original reference
+   - git remote rm origin 
+5. Add new remote reference
+   - git remote add origin NOME_DO_PROJETO
+6. Push all branches to new repository
+   - git push origin --all
+7. Push all tags into branch
+   - git push --tags
 
 ## Git principal commands
 - Set user name and email
@@ -493,8 +507,11 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
     - git init
 - Create a local copy of a remote repository
     - git clone `<url/to/projectname.git> [localprojectname]` # Example: git clone https://github.com/me/repoa.git
+    - git clone --mirror `<url/to/projectname.git> [localprojectname]` # Download all remote branches
 - Add a remote repository
-    - git remote add `<alias-name> <url>` # Example: git remote add origin https://github.com/me/repob.git
+    - git remote add `<alias-name> <url/to/projectname.git>` # Example: git remote add origin https://github.com/me/repob.git
+- Remove reference of the remote repository
+  - git remote rm origin
 - Display information about remote repositories associated with the local repository
     - git remote -v # -v means --verbose
 - Adds untracked of modified files to the staging area
@@ -516,6 +533,7 @@ When attempting a merge, files with conflicts are modified by Git and placed in 
 - Writes commits for a branch to a remote repository
     - git push `[-u] [<repository>] [<branch>]` # Example: git push origin master, use this form to first push
     - git push `[<repository>] [<branch>]`
+    - git push origin --all
 - Create an SHA-1 for any content
     - git hash-object `<file>` # Example: git hash-object FilaA.txt
 - Create a lightweight tag
