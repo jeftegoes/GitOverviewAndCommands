@@ -88,31 +88,31 @@
 - [20. Transfer repo to another repo](#20-transfer-repo-to-another-repo)
 - [21. Git principal commands](#21-git-principal-commands)
 
-## 1. DevOps and Git in a nutshell
+# 1. DevOps and Git in a nutshell
 
-### 1.1. Continuous improvement
+## 1.1. Continuous improvement
 
 - DevOps has a few fundamental principles that most modern software projects follow. One of the key principles is to continuously plan, build and release small improvements to your product.
 - This is contrasted with what might be called the waterfall approach, In which many features are planned, developed and released as one batch.
 
-#### 1.1.1. Small batch size
+### 1.1.1. Small batch size
 
 - Small batch size leads to continuous improvement.
 
-#### 1.1.2. Adding a feature
+### 1.1.2. Adding a feature
 
 - Small batch size also applies to features.
 
-### 1.2. Managing project versions
+## 1.2. Managing project versions
 
-#### 1.2.1. Our project
+### 1.2.1. Our project
 
 - Product contains 50 files of code.
   - This is out "project".
 - We want to continuously improve it.
 - Hot does Git help?
 
-#### 1.2.2. Git commits
+### 1.2.2. Git commits
 
 - Git manages versions of projects.
 - Each version of a project is called a _commit_.
@@ -120,54 +120,54 @@
   - Commits A and B only differ by one file.
   - A small improvement in the product.
 
-#### 1.2.3. Project history
+### 1.2.3. Project history
 
 - The collection of commits contain the history of the project.
   - You can review the history.
   - You can "undo" a change.
 
-#### 1.2.4. Is git efficient?
+### 1.2.4. Is git efficient?
 
 - Each commit is a snapshop of the entire project.
 - Behind the scenes, Git is very efficient at storing commits.
   - Each unique file is stored only once.
 
-### 1.3. Branches
+## 1.3. Branches
 
 - All commits belong to a _branch_.
   - An independent line of development of the project.
 - By default, there is a single branch and it is called _master_.
 
-#### 1.3.1. Creating branches
+### 1.3.1. Creating branches
 
 - How do you maintain a stable project at the same time that you are working on it?
   - Create a separate branch.
 - The _master_ branch does not know about the _featureX_ branch.
 
-#### 1.3.2. Teams
+### 1.3.2. Teams
 
 - The independence of branches allows teams to scale their work.
 
-### 1.4. Pull requests
+## 1.4. Pull requests
 
-#### 1.4.1. Merging
+### 1.4.1. Merging
 
 - After a _merge_, the _master_ branch contains the new feature.
 
-#### 1.4.2. Pull request
+### 1.4.2. Pull request
 
 - Request to merge your branch into another branch.
   - Team members can discuss, review and approve your changes.
   - Can require passing automated tests.
 
-#### 1.4.3. Pull request accepted
+### 1.4.3. Pull request accepted
 
 - Reviewed
 - Tested
 
-## 2. Version control
+# 2. Version control
 
-### 2.1. What is version control?
+## 2.1. What is version control?
 
 - Version control enables teams to manage a collecion of files in an agile way.
 - Content:
@@ -180,7 +180,7 @@
   - Manages small changes.
   - Easily test, fix or undo ideas and changes.
 
-### 2.2. What type of content?
+## 2.2. What type of content?
 
 - Source code.
 - Automated tests.
@@ -189,7 +189,7 @@
 - A book.
 - Web site content.
 
-### 2.3. Distributed version control system (DVCS)
+## 2.3. Distributed version control system (DVCS)
 
 - A DVCS usually has these characteristics:
   - (User A) local repository >>> remore repository <<< local repository (User B).
@@ -197,9 +197,9 @@
   - Users can work offline.
   - Can easily synchronize repositories.
 
-## 3. Git overview
+# 3. Git overview
 
-### 3.1. What is Git?
+## 3.1. What is Git?
 
 - Git is a distributed version control system (DVCS)
 - Open source software (OSS)
@@ -207,13 +207,13 @@
 - Adapt to many types of projects and workflows
   - Works well for large or small projects
 
-### 3.2. What is a git repository?
+## 3.2. What is a git repository?
 
 - A series of _snapshots_, or _commits_
 
-### 3.3. Command line vs. user interface
+## 3.3. Command line vs. user interface
 
-### 3.4. Should you use the command line?
+## 3.4. Should you use the command line?
 
 - Command line skills are assumed by the industry
 - Command line = automatable
@@ -231,25 +231,25 @@
   - GitHub Enterprise
   - Open source software
 
-## 4. Installation and getting started
+# 4. Installation and getting started
 
-### 4.1. Installing Git
-
----
-
-### 4.2. Git syntax
+## 4.1. Installing Git
 
 ---
 
-### 4.3. Getting help
+## 4.2. Git syntax
 
 ---
 
-### 4.4. Configuring user information and the default editor
+## 4.3. Getting help
 
 ---
 
-## 5. Two scenarios starting with a remote repository
+## 4.4. Configuring user information and the default editor
+
+---
+
+# 5. Two scenarios starting with a remote repository
 
 | Have a local repository | Task             |
 | ----------------------- | ---------------- |
@@ -275,7 +275,7 @@
   git push -u origin main
   ```
 
-## 6. Git status files legends
+# 6. Git status files legends
 
 - Legends:
   - U or ?? - Untracked.
@@ -283,24 +283,24 @@
   - M - Modified.
   - AM - Staged and Modified.
 
-## 7. Graph Model
+# 7. Graph Model
 
 ---
 
-## 8. Git IDs
+# 8. Git IDs
 
 ---
 
-### 8.1. Git objects
+## 8.1. Git objects
 
 1. **Commit object** - A small text file, that contains informations such as the commit user informatiom, commit message, a reference to the commit's parent of parents, and a reference to the root tree of the project.
 2. **Annotated tags** - A reference to a specific commit.
 3. **Tree** - Directories and filenames in the project.
 4. **Blob** - The content of a file in the project.
 
-### 8.2. Git's graph model
+## 8.2. Git's graph model
 
-#### 8.2.1. Graphs
+### 8.2.1. Graphs
 
 - Graph:
   - A way to model connected things.
@@ -312,48 +312,48 @@
 - Acyclic:
   - Acyclic means.
 
-#### 8.2.2. Directed acyclic graph (DAG)
+### 8.2.2. Directed acyclic graph (DAG)
 
-### 8.3. Git IDs
+## 8.3. Git IDs
 
 - The **name** of a Git object.
 - 40-character hexadecimal string.
 - Also know as object ID, SHA-1, hash and checksum.
 - Example: e189613221afc1e1c50f84f8ee92e9899bc55735 (HEAD -> master, origin/master).
 
-### 8.4. Shortening Git IDs
+## 8.4. Shortening Git IDs
 
 - Four or more characters of the beginning of a Git ID.
 - Example: **e189613**221afc1e1c50f84f8ee92e9899bc55735 (HEAD -> master, origin/master).
 
-## 9. Git references
+# 9. Git references
 
-### 9.1. Overview of references
+## 9.1. Overview of references
 
 - User-friendly name that points to:
   - A commit SHA-1 hash.
   - Another reference, known as a symbolic reference.
 
-### 9.2. Branch labels and HEAD
+## 9.2. Branch labels and HEAD
 
-#### 9.2.1. Branch label
+### 9.2.1. Branch label
 
 - Points to the most recent commit in the branch, the "tip of the branch".
 - Implemented as a referentece.
 
-#### 9.2.2. Head
+### 9.2.2. Head
 
 - A referebce to the current commit.
 - Usually points to the branch label of the current branch.
 - One HEAD per repository.
 -
 
-### 9.3. Tags
+## 9.3. Tags
 
 Reference/label attached to a specific commit.
 Tags can be used instead of branchs labels or Git IDs in Git commands.
 
-#### 9.3.1. Types of tags
+### 9.3.1. Types of tags
 
 - Lightweight:
   - A simple reference to a commit.
@@ -362,28 +362,28 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
   - Includes tag author information, tag date, tag message, the commit ID.
   - Optionally can be signed and verified with GNU Privacy Guard (GPG).
 
-## 10. Branches
+# 10. Branches
 
-### 10.1. Benefits of branches
+## 10.1. Benefits of branches
 
 - Fast and easy to create.
 - Enable experimentation.
 - Enable team development.
 - Support multiple project versions.
 
-### 10.2. Topic and long-running branches
+## 10.2. Topic and long-running branches
 
 - Topic
   - A feature, a bug fix, a hotfix, a configuration change, etc.
 - Long-lived
   - master, velop, release, etc.
 
-### 10.3. Checkout
+## 10.3. Checkout
 
 1. Updates the HEAD reference.
 2. Updates the working tree with tree with the commit's files.
 
-## 11. Merging
+# 11. Merging
 
 - Main types of merges:
 
@@ -392,20 +392,20 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
 3. Squash merge
 4. Rebase
 
-### 11.1. Merge commit
+## 11.1. Merge commit
 
 1. Combines the commits at the tips of the merged branches.
 2. Places the result in the merge commit (new specific commit).
 
-### 11.2. Fast-forward (FF) merge
+## 11.2. Fast-forward (FF) merge
 
 - Moves the base branch label to the tip of the topic branch
   - Conditions for a fast-forward merge
     - Possible if no other commits have been made to the base branch since branching
 
-## 12. Resolving merge conflicts
+# 12. Resolving merge conflicts
 
-### 12.1. Merge conflict overview
+## 12.1. Merge conflict overview
 
 - Merge conflicts occur when a person needs to make a decision.
 - Merge conflicts can only occur if the same file is changed.
@@ -418,7 +418,7 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
     - Git merges are usually quite easy.
     - Small, frequent merges are the easiest.
 
-### 12.2. Resolving a merge conflict
+## 12.2. Resolving a merge conflict
 
 - Involves three commits:
   1. The tip of the current branch (B) - "ours" or "mine".
@@ -438,33 +438,33 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
   - Text form the `HEAD` commit is between `<<<<<<< and =======`.
   - Text from the branch to be merged is between `======= and >>>>>>>`.
 
-## 13. Tracking branches
+# 13. Tracking branches
 
-### 13.1. Tracking branch overview
+## 13.1. Tracking branch overview
 
 - A local branch that represents a remote branchs `<remote>/<branch>`.
 
-### 13.2. Viewing tracking branch names and status
+## 13.2. Viewing tracking branch names and status
 
 - remotes/origin/HEAD THIS IS A SYMBOLIC REFERENCE.
 - Allows `<remote>` to be specified instead of `<remote>/<branch>` in Git commands.
 
-## 14. Fetch, Pull and Push
+# 14. Fetch, Pull and Push
 
-### 14.1. Network command overview
+## 14.1. Network command overview
 
 - **Clone** - Copies a remote repository.
 - **Fetch** Retrives new objects and references from the remote repository.
 - **Pull** - Fetches and merges commits locally.
 - **Push** - Adds new objects and references to the remote repository.
 
-### 14.2. Fetch
+## 14.2. Fetch
 
 - Retrieves new objects and references from another repository.
 - Tracking branches are updated.
   - Fetch updates tracking branch information.
 
-### 14.3. Pull
+## 14.3. Pull
 
 - Combines `git fetch` and `git merge FETCH_HEAD`:
   - If objects are fetched, the tracking branch is merged into the current local branch.
@@ -475,13 +475,13 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
   - `--ff-only` - cancel instead of doing a merge commit.
   - `--rebase [--preserve-merges]`.
 
-### 14.4. Push
+## 14.4. Push
 
 - Push adds commits to the remote repository.
 
-## 15. Rebasing
+# 15. Rebasing
 
-### 15.1. Rebasing overview
+## 15.1. Rebasing overview
 
 - Two types of rebase:
   - Rebase.
@@ -512,13 +512,13 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
     - It can cause problems if your commits have been shared.
     - You are not preserving the commit history.
 
-### 15.2. Executing a rebase
+## 15.2. Executing a rebase
 
-### 15.3. Rebasing with merge conflicts
+## 15.3. Rebasing with merge conflicts
 
-## 16. Rewriting history
+# 16. Rewriting history
 
-### 16.1. Amending a commit
+## 16.1. Amending a commit
 
 - You can change the most recent commit:
   - Change the commit message.
@@ -527,7 +527,7 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
 - You can modify the staging area and amend a commit.
 - Optionally use the --no-edit option to reuse the previous commit message.
 
-### 16.2. Interactive rebase
+## 16.2. Interactive rebase
 
 - Interactive rebase lets you edit commits using commands.
   - The commits can belong to any branch.
@@ -555,9 +555,9 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
     - The work of this commit is lost
     - Greater change of a merge conflict
 
-## 17. Pull requests I
+# 17. Pull requests I
 
-### 17.1. Pull request overview
+## 17.1. Pull request overview
 
 - A feature of Git hosting sites.
   - Pull requests are opened using an online Git host such as Bitbucket or GitHub.
@@ -573,16 +573,16 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
 - You can open a pull request any time after creating the branch.
 - You do not need to edit the pull request if you add a commit to the branch.
 
-### 17.2. Single repository pull requests
+## 17.2. Single repository pull requests
 
 - Preparing for pull request (single repository):
   - Create a feature branch.
   - Optionally work on the feature branch.
   - Push the branch to the remote repository.
 
-## 18. Pull requests II
+# 18. Pull requests II
 
-### 18.1. Forking overview
+## 18.1. Forking overview
 
 - Forking - copying a remote repository to your own online account
 - Both repositories are remote repositories
@@ -594,20 +594,20 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
   - A form is created uwing an online GIt hosting provider
   - Pull requests can be made form forks and merged into the upstream repository
 
-## 19. Git workflows
+# 19. Git workflows
 
-### 19.1. Centralized workflow
+## 19.1. Centralized workflow
 
 - Only a single branch
 - no pull requests/discussion
 
-### 19.2. Feature branch workflow
+## 19.2. Feature branch workflow
 
 - Work done on feature/topic branches
 - Single remote repository
 - Pull requests/discussion
 
-### 19.3. Forking workflow
+## 19.3. Forking workflow
 
 - Multiple remote repositories
 - Pull requests/discussion
@@ -616,7 +616,7 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
 - Can rebase your forked branch
 - Must synchronize with upstream
 
-### 19.4. Gitflow workflow
+## 19.4. Gitflow workflow
 
 - Enable a continuous train of project releases using multiple types of branches
 - Merging "Rules"
@@ -624,7 +624,7 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
   2. Commit to master only from a release or hotfix branch
   3. If you commit to master, also merge into the develop
 
-### 19.5. Squash merges
+## 19.5. Squash merges
 
 1. Merges the tip of the feature branch (D) onto the tip of the base branch (C)
 
@@ -638,7 +638,7 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
     - Commits B and D will eventually be garbage collected
   - A squash merge rewrites the commit history
 
-## 20. Transfer repo to another repo
+# 20. Transfer repo to another repo
 
 1. Mirror the project from repo X to repo Y
    - git clone --mirror `<url/to/projectname.git>`
@@ -655,7 +655,7 @@ Tags can be used instead of branchs labels or Git IDs in Git commands.
 7. Push all tags into branch
    - git push --tags
 
-## 21. Git principal commands
+# 21. Git principal commands
 
 - Set user name and email
   - git config --global user.name "your_username"
